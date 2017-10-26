@@ -1,0 +1,25 @@
+{
+  "name": "finly",
+  "description": "Modern Workflow",
+  "main": "index.js",
+  "authors": [
+    "zulfiqor"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS"
+  ],
+  "homepage": "https://github.com/ciplex/finly",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "4.0.0-beta"
+  }
+}
