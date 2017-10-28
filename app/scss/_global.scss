@@ -1,0 +1,24 @@
+body{
+  font-family: $font;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: $c-content;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// section
+.title_section{
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  color: $c_ts;
+}
+
+.desc_section{
+font-size: 36px;
+font-weight: 700;
+color: $c_b;
+}
