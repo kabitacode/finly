@@ -1,0 +1,57 @@
+#portofolio{
+  overflow: hidden;
+  padding: 0;
+
+  .content{
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      // max-width: auto;
+      height: 120%;
+
+      transition: all 0.35s ease-in-out;
+    }
+    .overlay{
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.65);
+      color: $w;
+      text-align: center;
+      padding: 60px 30px;
+
+      h3{
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      a{
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        line-height: 50px;
+        color: $w;
+        border-radius: 100%;
+        background-color: $primary;
+        text-align: center;
+        font-size: 22px;
+      }
+    }
+    &:hover, &:active, &:focus{
+      .overlay{
+        bottom: 0;
+      }
+      img{
+        transform: scale(1.2);
+        transition: 2s ease-in-out;
+        }
+      }
+  }
+}

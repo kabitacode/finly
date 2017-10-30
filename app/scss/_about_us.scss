@@ -1,0 +1,73 @@
+#about_us{
+  padding: 100px 0;
+
+  .image-profile{
+
+      .image{
+        height:400px;
+        width: 400px;
+        border-radius: 100%;
+        background-image: url(../images/image-7.jpg);
+        background-position: 50%;
+        background-size: cover;
+      }
+  }
+
+  .content{
+    padding-left: 60px;
+
+    .title_section{
+      margin-bottom: 30px;
+    }
+    .desc_section{
+      margin-bottom: 50px;
+    }
+    p{
+      font-weight: 500;
+      line-height: 1.8;
+      letter-spacing: 0.5px;
+    }
+    .author{
+      margin-top: 60px;
+      img{
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        margin-right: 15px;
+        float: left;
+      }
+      h5{
+        color: $c_b;
+        font-weight: 600;
+        padding-top: 10px;
+
+        span{
+            display: block;
+            font-weight: 400;
+            color: $c-content;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .statistic{
+    margin-top: 160px;
+    text-align: center;
+
+    h5{
+      font-size: 56px;
+      color: $c_b;
+      font-weight: 600;
+
+      span{
+        display: block;
+        font-size: 18px;
+        color: $c-content;
+        margin-top: 10px;
+      }
+    }
+  }
+
+}
