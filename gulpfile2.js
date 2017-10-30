@@ -1,11 +1,7 @@
 'use strict';
 
-// Documentasi
-// https://css-tricks.com/gulp-for-beginners/
-// https://www.npmjs.com/package/gulp-sass
-// https://browsersync.io/docs
-
 var gulp = require('gulp');
+
 // Requires the gulp-sass plugin
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
@@ -20,41 +16,38 @@ var cache = require('gulp-cache');
 var del = require('del');
 var runSequence = require('run-sequence');
 
-
-
-
 gulp.task('hello', function() {
   console.log('Hello Zell');
 });
 
 
-
-gulp.task('sass', function(){
+gulp.task('sass', function () {
   return gulp.src('app/scss/**/*.scss')
-    .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError)) // Converts Sass to CSS with gulp-sass
+  .pipe(sourcemaps.init())
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false
-    }))
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
-      stream: true
-    }))
+     stream: true
+   }))
 });
-
 
 gulp.task('browserSync', function() {
   browserSync.init({
     server: {
       baseDir: 'app',
       routes: {
-          "/bower_components": "bower_components"
-      }
+     "/bower_components": "bower_components"
+ }
     },
   })
 })
+
+
 
 
 gulp.task('useref', function(){
@@ -69,12 +62,11 @@ gulp.task('useref', function(){
 gulp.task('images', function(){
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
   // Caching images that ran through imagemin
-  .pipe(cache(imagemin({
+  .pipe((imagemin({
       interlaced: true
     })))
   .pipe(gulp.dest('dist/images'))
 });
-
 
 gulp.task('fonts', function() {
   return gulp.src('app/fonts/**/*')
@@ -84,15 +76,6 @@ gulp.task('fonts', function() {
 gulp.task('clean:dist', function() {
   return del.sync('dist');
 })
-
-
-
-gulp.task('watch', ['browserSync', 'sass'], function (){
-  gulp.watch('app/scss/**/*.scss', ['sass']);
-  // Reloads the browser whenever HTML or JS files change
-  gulp.watch('app/*.html', browserSync.reload);
-  gulp.watch('app/js/**/*.js', browserSync.reload);
-});
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
@@ -106,3 +89,11 @@ gulp.task('default', function (callback) {
     callback
   )
 })
+
+
+gulp.task('watch', ['browserSync', 'sass'], function (){
+  gulp.watch('app/scss/**/*.scss', ['sass']);
+  // Other watchers
+  gulp.watch('app/*.html', browserSync.reload);
+   gulp.watch('app/js/**/*.js', browserSync.reload);
+});
