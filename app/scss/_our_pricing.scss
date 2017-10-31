@@ -1,0 +1,134 @@
+#our_pricing{
+  padding: 160px 0;
+
+  .title_section{
+    margin-bottom: 30px;
+  }
+  .desc_section{
+    margin-bottom: 40px;
+  }
+  .content_section{
+    margin-bottom: 60px;
+    font-size: 16px;
+    padding-right: 20px;
+
+    a{
+      color: $c_b;
+      position: relative;
+      text-decoration: none;
+
+      &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 5px;
+        width: 100%;
+        height: 3px;
+        background-color: $primary;
+        z-index: -1;
+        opacity: 0.63
+      }
+    }
+  }
+
+  #btn_pricing{
+    border-bottom: 0;
+
+    .nav-item{
+      padding: 12px 35px;
+      color: $c_b;
+      font-weight: 500;
+      border: 2px solid $c_ef;
+      text-decoration: none;
+      font-size: 16px;
+      margin-left: 0;
+
+      &:nth-child(1){
+        border-top-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+
+      &:nth-child(2){
+        border-top-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        margin-left: -2px;
+      }
+
+      &.active{
+        background-color: $primary;
+        color: $w;
+        border-color: $primary;
+        z-index: 2;
+      }
+
+
+    }
+
+  }
+
+  #pricing_content{
+
+    .content{
+      border: 1px solid $c_ef;
+      margin-left: 20px;
+      margin-right: 20px;
+      padding: 50px 0;
+      text-align: center;
+      position: relative;
+      top:0;
+      border-radius: 3px;
+      transition: all 0.35s ease-in-out;
+
+      h4{
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      h5{
+        font-size: 56px;
+        color: $c_b;
+        font-weight: 600;
+
+        span{
+          font-size: 30px;
+          position: relative;
+          top: -20px;
+        }
+      }
+
+      ul{
+        list-style: none;
+        margin: 0 0 50px;
+        padding: 0;
+
+        li{
+          padding: 5px 0;
+        }
+      }
+
+      a{
+        color: $primary;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 8px 15px;
+        border-radius: 3px;
+      }
+
+      &:hover, &:active, &:focus{
+        background-color: $primary;
+        color: $w;
+        top: -10px;
+        border-color: $primary;
+
+        h5{
+          color: $w;
+        }
+        a{
+          background-color: $w;
+        }
+      }
+
+    }
+  }
+}
