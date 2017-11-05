@@ -1,0 +1,53 @@
+#our_team{
+  padding: 0 0 160px;
+  text-align: center;
+
+  .title_section{
+    font-size: 15px;
+    color: #d5d5d7;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1.5px;
+    text-transform: 15px;
+  }
+  .desc_section{
+    color: #0d1325;
+    font-size: 36px;
+    opacity: 0.9;
+    font-weight: 600;
+  }
+
+  .content{
+    margin-top: 80px;
+
+    &:hover, &:active, &:focus{
+      img{
+        transform: scale(1.1);
+        transition: 0.50s ease-in-out;
+      }
+
+    }
+    img{
+      position: relative;
+      width: 180px;
+      height: 180px;
+      border-radius: 100%;
+
+      transition: all 0.35s ease-in-out;
+}
+    h4{
+      margin-top: 40px;
+      font-size: 18px;
+      color: #0d1325;
+
+      span{
+        font-size: 14px;
+        font-weight: 400;
+        color: #b3b4b8;
+        display: block;
+        margin-top: 5px;
+        letter-spacing: 0.6px;
+        }
+      }
+  }
+}

@@ -1,0 +1,30 @@
+#blog{
+  padding: 120px 0 60px;
+
+.content{
+  padding: 0 20px;
+  overflow: hidden;
+
+  img{
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  h5{
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  p{
+    font-size: 20px;
+    color: #0d1325;
+    font-weight: 600;
+  }
+
+  .fa{
+    font-size: 24px;
+  }
+}
+
+}

@@ -7,6 +7,11 @@
     height: 320px;
     overflow: hidden;
 
+    @media screen and (max-width: 320px){
+      img{
+      
+      }
+    }
     img{
       position: absolute;
       top: 0;
@@ -14,10 +19,10 @@
       right: 0;
       // max-width: auto;
       height: 120%;
-
       transition: all 0.35s ease-in-out;
     }
     .overlay{
+
       position: absolute;
       bottom: -100%;
       left: 0;
