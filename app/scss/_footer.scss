@@ -23,10 +23,10 @@
     #inputform{
       input{
         border: 1px solid #EFEFEF;
-        padding: 15px 65px;
+        padding: 15px 25px;
         border-radius: 5px;
         outline: 0;
-
+        width: 95%;
       }
     }
     #btnnewsletter{
@@ -34,7 +34,7 @@
         text-decoration: none;
         cursor: pointer;
         .submit{
-            padding: 15px 0px;
+            padding: 15px 40px;
             border-radius: 5px;
             background-color: $primary;
             border-color: $primary;
@@ -42,7 +42,11 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 500;
-            width: 112%;
+            width: 113%;
+
+            @media screen and (max-width: 320px){
+              width: 96%;
+            }
         }
       }
     }
@@ -50,7 +54,7 @@
     .nav{
       margin-top: 60px;
       display: block;
-      
+
       .logo-brand{
         color: $w;
         font-size: 26px;
